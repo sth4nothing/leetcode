@@ -105,5 +105,5 @@ venv.bak/
 **/*
 
 !lc*.py
-!lc.sql
+!lc*.sql
 lcxxx.py
