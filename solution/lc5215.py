@@ -1,8 +1,21 @@
+# -*- coding:utf-8 -*-
+import bisect
+import collections
+import functools
+import heapq
+import itertools
+import json
+import queue
+import re
+from typing import (Any, Callable, Counter, DefaultDict, Dict, Iterator, List,
+                    Sequence, Set, Tuple)
+
+
 class Solution:
-    def getMaximumGold(self, grid: 'List[List[int]]') -> int:
+    def getMaximumGold(self, grid: List[List[int]]) -> int:
         d = ((1, 0), (0, 1), (-1, 0), (0, -1))
         m, n = len(grid), len(grid[0])
-        visit = set()
+        visit: Set[Tuple[int, int]] = set()
 
         def dig(x: int, y: int) -> int:
             if 0 <= x < m and 0 <= y < n and grid[x][y] > 0:
