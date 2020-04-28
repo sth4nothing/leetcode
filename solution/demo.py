@@ -7,7 +7,6 @@ import heapq
 import itertools
 import json
 import math
-import queue
 import re
 from typing import (Any, Callable, Counter, DefaultDict, Dict, Iterable,
                     Iterator, List, Optional, Sequence, Set, Tuple, TypeVar)
@@ -29,6 +28,8 @@ data = json.loads('''
 ''')
 
 
+import queue
+from typing import *
 class Solution:
     def fn(self, s: str) -> str:
         pass
